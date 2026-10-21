@@ -1,0 +1,21 @@
+{
+  "name": "campusledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampusLedger - Classic College attendance portal (npm workspaces monorepo)",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c \"1b3a66,c9a227\" \"npm run dev -w @campusledger/server\" \"npm run dev -w @campusledger/client\"",
+    "build": "npm run build -w @campusledger/client",
+    "test": "npm run test -w @campusledger/server",
+    "e2e": "node e2e/smoke.js",
+    "start": "npm run start -w @campusledger/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "playwright": "^1.64.1"
+  }
+}

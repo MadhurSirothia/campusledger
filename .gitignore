@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# database
+*.sqlite
+*.sqlite3
+*.db
+server/data/
+server/data/**
+
+# uploaded assignment files
+server/uploads/assignments/*
+!server/uploads/assignments/.gitkeep
+
+# build output
+client/dist/
+dist/
+
+# logs / editor
+*.log
+npm-debug.log*
+.DS_Store
+.vscode/
+.idea/
+
+# test artifacts
+test-results/
+playwright-report/
